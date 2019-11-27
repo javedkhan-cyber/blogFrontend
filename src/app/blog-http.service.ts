@@ -1,11 +1,12 @@
+
+alert('bhai contact kar mujhko 8896740084 whatsapp hai ye')
 import { Injectable } from '@angular/core';
 //Importing Http client to make the requests
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 //import observables related code.
 import { Observable } from "rxjs";
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/do';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,7 @@ export class BlogHttpService {
 
   constructor(private _http:HttpClient) { 
     console.log("blog-http service called");
+    
   }
 
   //create blog Method
