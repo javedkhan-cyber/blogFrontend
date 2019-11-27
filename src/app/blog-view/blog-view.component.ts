@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewContainerRef } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 //Importing route related code
 import { ActivatedRoute, Router } from '@angular/router';
@@ -21,10 +21,10 @@ export class BlogViewComponent implements OnInit, OnDestroy {
   
 
   constructor(private _route: ActivatedRoute, private router: Router, public blogService: BlogService, public blogHttpService:BlogHttpService,
-    private toastr:ToastsManager,
+    private toastr:ToastrService,
     private vcr: ViewContainerRef,
     private location: Location) {
-      this.toastr.setRootViewContainerRef(vcr);
+      // this.toastr.setRootViewContainerRef(vcr);
       
     console.log("blog-view constructor is called");
   }

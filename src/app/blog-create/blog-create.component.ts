@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { BlogHttpService } from '../blog-http.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-blog-create',
@@ -17,10 +17,10 @@ export class BlogCreateComponent implements OnInit {
     public blogCategory: string,
     public possibleCategories = ['Comedy', 'Drama', 'Action', 'Technology'],
     private _route: ActivatedRoute, private router: Router,
-    private toastr:ToastsManager,
+    private toastr:ToastrService,
     vcr: ViewContainerRef) {
 
-      this.toastr.setRootViewContainerRef(vcr);
+      // this.toastr.setRootViewContainerRef(vcr);
     
    }
 
